@@ -4,11 +4,8 @@ import Image from 'next/image'
 
 export default function Linktree() {
   const links = [
-    { name: 'Instagram', url: 'https://instagram.com/yourusername', icon: '/icons/instagram.svg' },
-    { name: 'Twitter', url: 'https://twitter.com/yourusername', icon: '/icons/x.svg' },
-    { name: 'YouTube', url: 'https://youtube.com/yourchannel', icon: '/icons/youtube.svg' },
-    { name: 'Website', url: 'https://yourwebsite.com', icon: '/icons/globe.svg' },
-    { name: 'Email', url: 'mailto:your@email.com', icon: '/icons/gmail.svg' },
+    { name: 'WhatsApp', url: 'https://chat.whatsapp.com/BSZy2cScQJJIcvwqPAInwB', icon: '/icons/whatsapp.svg' },
+    { name: 'X/Twitter', url: 'https://x.com/BitcoinNea', icon: '/icons/x.svg' },
   ]
 
   const contacts = [
