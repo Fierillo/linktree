@@ -1,31 +1,23 @@
 'use client'
 
 import Image from 'next/image'
+import { linktreeData } from '../data/LinktreeData'
 
 export default function Linktree() {
-  const links = [
-    { name: 'WhatsApp', url: 'https://chat.whatsapp.com/BSZy2cScQJJIcvwqPAInwB', icon: '/icons/whatsapp.svg' },
-    { name: 'X/Twitter', url: 'https://x.com/BitcoinNea', icon: '/icons/x.svg' },
-  ]
-
-  const contacts = [
-    { name: 'Capitán Jack', role: 'Líder de la Comunidad', email: 'jack@pirates.com' },
-    { name: 'Barbanegra', role: 'Moderador', email: 'barba@pirates.com' },
-    { name: 'Calico Jack', role: 'Soporte', email: 'calico@pirates.com' },
-  ]
+  const { profile, links, contacts, footer } = linktreeData
 
   return (
     <div className="container">
       <div className="profile">
         <Image
-          src="/profile.png"
+          src={profile.image}
           alt="Pirate Profile"
           width={120}
           height={120}
           className="profile-img"
         />
-        <h1>Bitcoin NEA</h1>
-        <p>La comunidad bitcoiner mas picante del noreste Argentino</p>
+        <h1>{profile.name}</h1>
+        <p>{profile.bio}</p>
       </div>
       <ul className="links">
         {links.map((link, index) => (
@@ -46,7 +38,7 @@ export default function Linktree() {
             </li>
           ))}
         </ul>
-        <p>© 2023 Pirate Community. Arrr, all rights reserved!</p>
+        <p>{footer.copyright}</p>
       </footer>
     </div>
   )
